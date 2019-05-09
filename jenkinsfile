@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+        stage('Be polite') {
+            steps {
+                script {
+                    echo "Hello I am your new job !"
+                }
+            }
+        }
+    }
+}
