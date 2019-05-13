@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    enviroment {
+        NTR = 'Phillipe'
+    }
     stages {
         stage('Be polite') {
             steps {
