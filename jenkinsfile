@@ -5,12 +5,9 @@ pipeline {
             steps {
                 script {
                     echo "Hello I am your new job !"
-                    
-                    sh label: '', script: '''sh \'env > env.txt\' 
-                    for (String i : readFile(\'env.txt\').split("\\r?\\n")) {
-                        println i
-                    }'''
+                   
                 }
+                sh label: '', script: 'env | sort'
             }
         }
     }
