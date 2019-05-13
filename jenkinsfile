@@ -3,6 +3,9 @@ pipeline {
     environment {
         NTR = 'Phillipe'
     }
+    parameters {
+        booleanParam(defaultValue: true, description: '', name: 'userFlag')
+    }
     stages {
         stage('Be polite') {
             steps {
@@ -10,6 +13,7 @@ pipeline {
                     echo "Hello I am your new job !"
                    
                 }
+                echo "flag: ${params.userFlag}"
                 sh label: '', script: 'env | sort'
             }
         }
